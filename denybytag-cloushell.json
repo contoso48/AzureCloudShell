@@ -1,0 +1,21 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "anyOf": [
+        {
+          "field": "tags['ms-resource-usage']",
+          "exists": "true"
+        },
+        {
+          "field": "tags['ms-resource-usage']",
+          "equals": "azure-cloud-shell"
+        }
+      ]
+    },
+    "then": {
+      "effect": "deny"
+    }
+  },
+  "parameters": {}
+}
