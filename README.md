@@ -7,11 +7,11 @@ tag value: azure-cloud-shell
 
 
 
-#
+
 # Azure RBAC on Cloud Shell Storage Accounts
-Disallow Contributor or Owner permissions at Subscripiton Scope.
-Add Contributor Role to user-specific storage account.
-User creates his/her Azure cloud shell using above existing storage account.
+1. Disallow Contributor or Owner permissions at Subscription Scope.
+2. Add Contributor Role to user-specific storage account.
+3. User creates his/her Azure cloud shell using above existing storage account.
 
 Consider using a cloned Contributor Role at the subscription scope level that denies following:
   Microsoft.Storage/storageAccounts/fileServices/share/read                 NotAction
@@ -21,7 +21,7 @@ Consider using a cloned Contributor Role at the subscription scope level that de
 Ensure no other competing role (such as Owner) is assigned at subscription level without approval
 
 
-#
+
 # Unmount or Dismount Cloud Shell Drive
 Bash:  clouddrive unmount
 PS:   Dismount-CloudDrive
