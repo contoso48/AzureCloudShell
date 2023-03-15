@@ -14,9 +14,10 @@ tag value: azure-cloud-shell
 3. User creates his/her Azure cloud shell using above existing storage account.
 
 Consider using a cloned Contributor Role at the subscription scope level that denies following:
-  Microsoft.Storage/storageAccounts/fileServices/share/read                 NotAction
-  Microsoft.Storage/storageAccounts/fileServices/takeOwnership/action       NotDataAction
-  Microsoft.Storage/storageAccounts/fileServices/fileshares/files/read      NotDataAction
+* Microsoft.Storage/storageAccounts/fileServices/share/read                 NotAction
+* Microsoft.Storage/storageAccounts/fileServices/takeOwnership/action       NotDataAction
+* Microsoft.Storage/storageAccounts/fileServices/fileshares/files/read      NotDataAction
+
 
 Ensure no other competing role (such as Owner) is assigned at subscription level without approval
 
